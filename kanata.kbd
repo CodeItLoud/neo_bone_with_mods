@@ -1,0 +1,79 @@
+(defcfg
+    process-unmapped-keys yes
+)
+
+(deflocalkeys-win
+  ü    186
+  +    187
+  #    191
+  ö    192
+  ß    219
+  ^    220
+  ´    221
+  ä    222
+  <    226
+)
+
+(defalias 
+  bone3 (layer-while-held bone3)
+
+  drpt (unicode …)
+  unds (unicode _)
+  sqbl (unicode [)
+  sqbr (unicode ])
+  cret (unicode ^)
+  exkl (unicode !)
+  lwth (unicode <)
+  grth (unicode >)
+  eql  (unicode =)
+  amps (unicode &)
+  bpnd (unicode £)
+
+  bksl (unicode \)
+  slsh (unicode /)
+  cbrl (unicode {)
+  cbrr (unicode })
+  star (unicode *)
+  qstn (unicode ?)
+  brtl (unicode "(")
+  brtr (unicode ")")
+  mins (unicode -)
+  coln (unicode :)
+  at   (unicode @)
+
+  ;; using terminology for different kind of quotes as in https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html
+  hash (unicode #)
+  dllr (unicode $)
+  pipe (unicode |)
+  tild (unicode ~)
+  lsqm (unicode `) ;; left single quotation mark
+  plus (unicode +)
+  pcnt (unicode %)
+  dq   (unicode r#"""#) ;; double quotes
+  apos (unicode ')
+  scln (unicode ;)
+)
+
+(defsrc
+  ^         1    2    3      4      5    6    7    8    9    0    ß    ´    bspc
+  tab       q    w    e      r      t    z    u    i    o    p    ü    +
+  caps      a    s    d      f      g    h    j    k    l    ö    ä    #    ret
+  lsft <    y    x    c      v      b    n    m    ,    .    -    rsft
+  lctl lmet lalt             spc              ralt rmet rctl
+)
+
+(deflayer de
+  ^         1    2    3      4    5    6    7    8    9    0    ß    ´    bspc
+  tab       q    w    e      r    t    z    u    i    o    p    ü    +
+  @bone3    a    s    d      f    g    h    j    k    l    ö    ä    @bone3    ret
+  lsft <    y    x    c      v    b    n    m    ,    .    -    rsft
+  lctl lmet lalt             spc              ralt rmet rctl
+)
+
+(deflayer bone3
+  ^         1     2     3     4     5     6     7     8     9    0     ß     ´    bspc
+  tab       @drpt @unds @sqbl @sqbr @cret @exkl @lwth @grth @eql  @amps @bpnd +
+  @bone3    @bksl @slsh @cbrl @cbrr @star @qstn @brtl @brtr @mins @coln @at   @bone3    ret
+  lsft <    @hash @dllr @pipe @tild @lsqm @plus @pcnt @dq   @apos @scln rsft
+  lctl lmet lalt            spc              ralt rmet rctl
+)
