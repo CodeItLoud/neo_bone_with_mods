@@ -92,3 +92,11 @@
   lsft <    @hash @dllr @pipe @tild @lsqm @plus @pcnt @dq   @apos @scln rsft
   lctl lmet lalt            spc              ralt rmet rctl
 )
+
+(deflayer qwertz ;; layer not yet implemented
+  ^         1    2    3      4    5    6    7    8    9    0    ß    ´    bspc
+  tab       q    w    e      r    t    z    u    i    o    p    ü    +
+  @bone3    a    s    d      f    g    h    j    k    l    ö    ä    @bone3    ret
+  lsft <    y    x    c      v    b    n    m    ,    .    -    rsft
+  lctl lmet lalt             spc              ralt rmet rctl
+)
