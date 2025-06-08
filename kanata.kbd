@@ -14,6 +14,21 @@
   <    226
 )
 
+(deflocalkeys-macos
+  ß    12
+  ´    13
+  z    21
+  ü    26
+  +    27
+  ö    39
+  ä    40
+  <    41
+  #    43
+  y    44
+  -    53
+  ^    86
+)
+
 (defalias 
   bone3 (layer-while-held bone3)
 
