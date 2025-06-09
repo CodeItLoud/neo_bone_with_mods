@@ -30,6 +30,10 @@
 )
 
 (defalias 
+  ;; home row mods
+  modi (tap-hold 0 200 i lsft) ;; tap: i   hold: left shift
+  modr (tap-hold 0 200 r rsft) ;; tap: r   hold: right shift
+
   bone3 (layer-while-held bone3)
 
   drpt (unicode …)
@@ -78,11 +82,11 @@
 )
 
 (deflayer bone1
-  ^         1    2    3      4    5    6    7    8    9    0    ß    ´    bspc
-  tab       j    d    u      a    c    p    h    l    m    w    ß    +
-  @bone3    x    t    i      e    o    b    n    r    s    g    q    @bone3    ret
-  lsft <    y    v    ü      ä    ö    f    z    ,    .    k    rsft
-  lctl lmet lalt             spc              ralt rmet rctl
+  ^         1    2    3       4    5    6    7    8     9    0    ß    ´    bspc
+  tab       j    d    u       a    c    p    h    l     m    w    ß    +
+  @bone3    x    t    @modi   e    o    b    n    @modr s    g    q    @bone3    ret
+  lsft <    y    v    ü       ä    ö    f    z    ,     .    k    rsft
+  lctl lmet lalt              spc              ralt rmet rctl
 )
 
 (deflayer bone3
