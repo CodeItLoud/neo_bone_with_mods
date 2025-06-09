@@ -30,10 +30,6 @@
 )
 
 (defalias 
-  ;; home row mods
-  modi (tap-hold 0 200 i lsft) ;; tap: i   hold: left shift
-  modr (tap-hold 0 200 r rsft) ;; tap: r   hold: right shift
-
   bone3 (layer-while-held bone3)
 
   drpt (unicode …)
@@ -71,6 +67,12 @@
   dq   (unicode r#"""#) ;; double quotes
   apos (unicode ')
   scln (unicode ;)
+
+  ;; home row mods
+  modi (tap-hold 0 200 i lsft) ;; tap: i   hold: left shift
+  modr (tap-hold 0 200 r rsft) ;; tap: r   hold: right shift
+  mode (tap-hold 0 200 e @bone3) ;; tap: e   hold: bone layer 3
+  modn (tap-hold 0 200 n @bone3) ;; tap: n   hold: bone layer 3
 )
 
 (defsrc
@@ -82,10 +84,10 @@
 )
 
 (deflayer bone1
-  ^         1    2    3       4    5    6    7    8     9    0    ß    ´    bspc
-  tab       j    d    u       a    c    p    h    l     m    w    ß    +
-  @bone3    x    t    @modi   e    o    b    n    @modr s    g    q    @bone3    ret
-  lsft <    y    v    ü       ä    ö    f    z    ,     .    k    rsft
+  ^         1    2    3       4     5    6    7     8     9    0    ß    ´    bspc
+  tab       j    d    u       a     c    p    h     l     m    w    ß    +
+  @bone3    x    t    @modi   @mode o    b    @modn @modr s    g    q    @bone3    ret
+  lsft <    y    v    ü       ä     ö    f    z     ,     .    k    rsft
   lctl lmet lalt              spc              ralt rmet rctl
 )
 
