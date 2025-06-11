@@ -32,41 +32,41 @@
 (defalias 
   bone3 (layer-while-held bone3)
 
-  drpt (unicode …)
-  unds (unicode _)
-  sqbl (unicode [)
-  sqbr (unicode ])
-  cret (unicode ^)
-  exkl (unicode !)
-  lwth (unicode <)
-  grth (unicode >)
-  eql  (unicode =)
-  amps (unicode &)
-  bpnd (unicode £)
+  drpt A-Period
+  unds S-Slash
+  sqbl A-5
+  sqbr A-6
+  cret (macro A-S-6 Space)
+  exkl S-1
+  lwth Backquote
+  grth S-Backquote
+  eql  S-0
+  amps S-6
+  bpnd A-S-4
 
-  bksl (unicode \)
-  slsh (unicode /)
-  cbrl (unicode {)
-  cbrr (unicode })
-  star (unicode *)
-  qstn (unicode ?)
-  brtl (unicode "(")
-  brtr (unicode ")")
-  mins (unicode -)
-  coln (unicode :)
-  at   (unicode @)
+  bksl A-S-7
+  slsh S-7
+  cbrl A-8
+  cbrr A-9
+  star S-BracketRight
+  qstn S-Minus
+  brtl S-8
+  brtr S-9
+  mins Slash
+  coln S-Period
+  at   A-l
 
   ;; using terminology for different kind of quotes as in https://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html
-  hash (unicode #)
-  dllr (unicode $)
-  pipe (unicode |)
-  tild (unicode ~)
-  lsqm (unicode `) ;; left single quotation mark
-  plus (unicode +)
-  pcnt (unicode %)
-  dq   (unicode r#"""#) ;; double quotes
-  apos (unicode ')
-  scln (unicode ;)
+  hash Backslash   ;; hash
+  dllr S-4         ;; dollar
+  pipe A-7         ;; pipe
+  tild (macro A-n Space)        ;; tilde
+  lsqm (macro Equal Space)           ;; left single quotation mark
+  plus BracketRight ;; plus
+  pcnt S-5         ;; percent
+  dq   S-2         ;; double quotes
+  apos S-Backslash ;; apostroph
+  scln S-Comma     ;; semicolon
 
   ;; home row mods
   modi (tap-hold 0 200 i lsft) ;; tap: i   hold: left shift
