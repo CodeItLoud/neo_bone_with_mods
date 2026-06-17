@@ -32,6 +32,9 @@
 (defalias 
   bone3 (layer-while-held bone3)
 
+  e-lcmd (tap-hold 0 200 e lmet)
+  t-rcmd (tap-hold 0 200 t rmet)
+
   drpt (unicode …)
   unds (unicode _)
   sqbl (unicode [)
@@ -98,7 +101,7 @@
 (deflayer bone1
   ^         1          2        3      4    5    6    7    8    9    0      ß      ´    bspc
   tab       ,          c        u      a    q    p    b    m    l    @ss-ch x      j
-  @bone3    .          s        i      e    o    d    t    n    r    h      f      @bone3    ret
+  @bone3    .          s        i      @e-lcmd o    d    @t-rcmd n    r    h      f      @bone3    ret
   lsft <    @os-lsft y        ü      ä    ö    v    g    w    z    k      @os-rsft
   lctl lmet lalt          spc              ralt rmet rctl
 )
